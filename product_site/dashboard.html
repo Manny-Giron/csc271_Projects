@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    Emmanuel Giron 10/04/2025
+    This page is the dashboard for Arms & Range Buddy
+    designed to to navigate to manage range days, firearm collections, etc.
+    This page includes a navbar with a logo and title, a content section with a grid links to other pages.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Log</title>
+    <link rel="stylesheet" type="text/css" href="styling/dashboard.css">
+</head>
+
+<body>
+    <!-- Navbar Section -->
+
+    <div class="Navbar">
+        <div id="navItems">
+            <div>
+                <img src="images/ARB_Logo.png" alt="Logo" id="arbLogo">
+            </div>
+            <div class="header">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+        <div>
+            <img src="images/settings.png" alt="Logo" id="settingsIcon">
+        </div>
+    </div>
+    <!-- Content Section -->
+    <div class="Content">
+        <h2>Welcome to your Dashboard!</h2>
+        <!-- Mock info used-->
+        <div id="lastRangeDay">
+            <h2>Your last range day:</h2>
+            <p>Firearm: Ruger Max 9</p>
+            <p>Date: 09/25/2025</p>
+            <p>Location: West Glocester Rod & Gun Club</p>
+        </div>
+        <!-- Grid of navigational links (only 2 pages exist)-->
+        <div class="linksGrid">
+
+            <a class="linkSquare" href="index.html">
+                <img src="images/homePage.png" alt="homepage" style="height:100px;">
+                Return To Homepage
+            </a>
+
+            <a class="linkSquare" href="rangeLog.html">
+                <img src="images/logbook.png" alt="range log" style="height:100px;">
+                Go to Range Log
+            </a>
+
+            <a class="linkSquare" href="index">
+                <img src="images/collection.png" alt="firearm collection" style="height:100px;">
+                Go to Firearm Collection
+            </a>
+
+            <a class="linkSquare" href="index">
+                <img src="images/rangeTraining.jpg" alt="safety training" style="height:100px;">
+                Go to Safety & Training Resources
+            </a>
+
+            <a class="linkSquare" href="index">
+                <img src="images/social.png" alt="cloud storage" style="height:100px;">
+                Go to Social Feature
+            </a>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="Footer">
+        <br>
+        <br>
+        <p>&copy; 2025 Arms & Range Buddy. All rights reserved.</p>
+        <a href="mailto:emmanuel.giron@uri.edu"><strong>Contact Us</strong></a>
+    </footer>
+</body>
+
+</html>

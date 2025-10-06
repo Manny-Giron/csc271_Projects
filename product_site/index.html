@@ -11,75 +11,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arms & Range Buddy</title>
+    <link rel="stylesheet" type="text/css" href="styling/index.css">
 </head>
 
 <body>
     <!-- Navbar Section -->
     <!-- I already know how to add styling and I wanted to have the logo on the left and the title on the right,
         so if i didn't style it for this part, the basic html would drive me insane -->
-    <div class="Navbar" style="display: flex; flex-direction: row;">
-        <div>
-            <img src="https://sdmntprsouthcentralus.oaiusercontent.com/files/00000000-d390-61f7-96ad-d808aa081dd6/raw?se=2025-09-20T02%3A32%3A46Z&sp=r&sv=2024-08-04&sr=b&scid=4de92bbc-1257-5e85-938b-c6b86b66b1f0&skoid=a3412ad4-1a13-47ce-91a5-c07730964f35&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-19T21%3A56%3A55Z&ske=2025-09-20T21%3A56%3A55Z&sks=b&skv=2024-08-04&sig=XYeK/h/VkX5SlZtcaTy%2B2RQrTI6G3EtAvQpMbk2eNJQ%3D"
-                alt="Logo" style="height:150px;">
+    <div class="Navbar">
+        <div id="navItems">
+            <div>
+                <img src="images/ARB_Logo.png" alt="Logo" id="arbLogo">
+            </div>
+            <div class="header">
+                <h1>Dashboard</h1>
+            </div>
         </div>
-        <div class="header">
-            <h1>Arms & Range Buddy</h1>
+        <div>
+            <a href="dashboard.html" id="accountButton">Login / Signup</a>
         </div>
     </div>
     <!-- Content Section -->
     <div class="Content">
-        <hr>
-        <h2>Welcome to Arms & Range Buddy!</h2>
-        <p><em>Your all in one, Range Partner!</em></p>
-        <h2>What are we?</h2>
-        <p><strong>Arms & Range Buddy</strong> is your all-in-one shooting companion.<br> Whether you’re a beginner
-            learning
-            the basics
-            or an experienced shooter tracking years of practice, this web app helps you stay organized, safe,
-            and
-            connected. <br>With tools for logging range sessions, managing your collection, reinforcing safety, and
-            sharing
-            with friends,
-            it provides <em>everything</em> you need to track progress and enjoy your shooting journey, <br>all from one
-            secure,
-            cloud-based platform.</p>
-        <br>
-        <br>
-        <h3>What do we provide?</h3>
-        <ul>
-            <li>Range Day Logging</li>
-            <li>Firearm Collection Management</li>
-            <li>Safety & Training Resources</li>
-            <li>Cloud Storage</li>
-            <li>Social Feature</li>
-        </ul>
-        <br>
-        <br>
-        <br>
-        <!-- Additional Links Section -->
-        <h3><strong>Want to learn more ?</strong></h3>
-        <div>
-            <ul>
-                <li>Check out our <a href="index.html">About Us</a> page to learn more about our mission and team.</li>
-                <li>Ready to get started? <a href="index.html">Login or Sign Up</a> to create your account and start
-                    managing your range days and firearm collection today!</li>
-                <li>Visit the <a href="https://www.nssf.org/safety/rules-firearms-safety/" target="_blank">NSSF Safety
-                        Tips</a> page for essential firearm safety tips and guidelines.</li>
-            </ul>
+        <div id="welcome">
+            <h2>Welcome to Arms & Range Buddy!</h2>
+            <p><em>Your all in one, Range Partner!</em></p>
         </div>
-        <br>
-        <br>
-        <h3>Alraedy have a account? Log / View Your Range Days</h3>
-        <a href="rangeLog.html">Click Here To Go There</a>
-    </div>
-    <!-- Footer Section -->
-    <footer>
-        <br>
-        <br>
-        <hr>
-        <p>&copy; 2025 Arms & Range Buddy. All rights reserved.</p>
-        <a href="mailto:emmanuel.giron@uri.edu"><strong>Contact Us</strong></a>
-    </footer>
+        <div class="item1">
+            <h2>What are we?</h2>
+        </div>
+
+        <div class="gridContainer">
+
+            <div class="item2">
+                <p><strong>Arms & Range Buddy</strong> is your all-in-one shooting companion.<br>
+                    Whether you’re a beginner learning the basics or an experienced shooter tracking years of practice,
+                    this web app helps you stay organized, safe, and connected.<br>
+                    With tools for logging range sessions, managing your collection, reinforcing safety, and sharing
+                    with friends, it provides <em>everything</em> you need to track progress and enjoy your shooting
+                    journey—all from one secure, cloud-based platform.
+                </p>
+            </div>
+
+            <div class="item3">
+                <h3>What do we provide?</h3>
+                <ul>
+                    <li>Range Day Logging</li>
+                    <li>Firearm Collection Management</li>
+                    <li>Safety & Training Resources</li>
+                    <li>Cloud Storage</li>
+                    <li>Social Feature</li>
+                </ul>
+            </div>
+
+            <div class="item4">
+                <h3><strong>Want to learn more?</strong></h3>
+                <ul>
+                    <li>Check out our <a href="index.html">About Us</a> page to learn more about our mission and team.
+                    </li>
+                    <li>Ready to get started? <a href="index.html">Login or Sign Up</a> to begin managing your range
+                        days and firearm collection today!</li>
+                    <li>Visit the <a href="https://www.nssf.org/safety/rules-firearms-safety/" target="_blank">NSSF
+                            Safety Tips</a> page for essential firearm safety guidelines.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <br>
+            <br>
+            <hr>
+            <p>&copy; 2025 Arms & Range Buddy. All rights reserved.</p>
+            <a href="mailto:emmanuel.giron@uri.edu"><strong>Contact Us</strong></a>
+        </footer>
 </body>
 
 </html>
