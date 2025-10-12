@@ -1,93 +1,163 @@
+/* ===== NAVBAR ===== */
 .Navbar {
     background-color: rgb(31, 58, 147);
     border-bottom: 1px solid black;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color: white
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 #arbLogo {
-    height: 75px;
-    margin-left: 20px;
+    height: 70px;
     background-color: white;
     border-radius: 10px;
+    padding: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#arbLogo:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
 
 #navItems {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    gap: 15px;
 }
 
 #settingsIcon {
-    margin-right: 20px;
-    height: 50px;
+    height: 45px;
     background-color: white;
-    border-radius: 45px;
-    padding: 5px;
+    border-radius: 50%;
+    padding: 6px;
+    margin-right: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #settingsIcon:hover {
     cursor: pointer;
+    transform: rotate(15deg);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin: 0;
 }
-
 
 .header {
     flex-grow: 1;
-    padding-top: 20px;
     margin-left: 1rem;
 }
 
-.linksGrid {
-    display: grid;
-    grid-template-columns: 250px 250px 250px;
-    grid-template-rows: 250px 250px;
-    justify-content: center;
-    gap: 50px;
-    padding-top: 50px;
+/* ===== CONTENT ===== */
+.Content {
+    text-align: center;
+    padding: 40px 20px;
 }
 
 #lastRangeDay {
-    margin-top: 2.5rem;
-    margin-left: 5rem;
+    margin: 3rem auto;
+    background-color: #f5f6f8;
+    border: 2px solid #d0d0d0;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    max-width: 600px;
+    text-align: left;
+    padding: 20px 30px;
+}
+
+#lastRangeDay h2 {
+    color: #2E8B57;
+    margin-top: 0;
+}
+
+/* ===== LINKS GRID ===== */
+.linksGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 30px;
 }
 
 .linkSquare {
     border: 2px solid black;
     border-radius: 15px;
-    background-color: #4a94f4b4;
+    background-color: rgba(74, 148, 244, 0.7);
+    color: white;
     text-align: center;
     font-weight: bold;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.linkSquare:hover {
+    background-color: rgb(46, 139, 87);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.linkSquare img {
+    margin-bottom: 10px;
+    height: 100px;
 }
 
 .linkSquare a {
     color: white;
+    text-decoration: none;
 }
 
-
-
+/* ===== FOOTER ===== */
 .Footer {
     border-top: 1px solid black;
     text-align: center;
     padding: 30px;
     margin-top: 100px;
+    background-color: #f5f6f8;
+    color: #333;
 }
 
+.Footer a {
+    text-decoration: none;
+    color: rgb(31, 58, 147);
+    font-weight: bold;
+}
+
+.Footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== GENERAL LINKS ===== */
 a {
     text-decoration: none;
 }
 
 a:visited {
-    color: purple;
-    text-decoration: none;
+    color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 800px) {
+    .Navbar {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    #lastRangeDay {
+        width: 90%;
+        text-align: center;
+    }
 }

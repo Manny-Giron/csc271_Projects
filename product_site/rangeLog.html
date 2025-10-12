@@ -2,84 +2,88 @@
 <html lang="en">
 <!-- 
     Emmanuel Giron 09/27/2025
-    This page is the homepage for Arms & Range Buddy, a web application 
+    This page is the Range Log for Arms & Range Buddy, a web application 
     designed to help firearm enthusiasts manage their range days and firearm collections.
-    This page includes a navbar with a logo and title, a content section describing the app's features,
+    This page includes a navbar, form for logging sessions, and a table for previous logs.
 -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Range Log</title>
+    <link rel="stylesheet" href="styling/rangeLog.css">
 </head>
 
 <body>
     <!-- Navbar Section -->
-
-    <div class="Navbar" style="display: flex; flex-direction: row;">
-        <div>
-            <img src="images/ARB_Logo.png" alt="Logo" style="height:100px;">
+    <div class="Navbar">
+        <div id="navItems">
+            <div>
+                <img src="images/ARB_Logo.png" alt="Logo" id="arbLogo">
+            </div>
+            <div class="header">
+                <h1>Range Log Book</h1>
+            </div>
         </div>
-        <div class="header">
-            <h1>Range Log Book</h1>
+        <div>
+            <a href="dashboard.html">
+                <img src="images/settings.png" alt="Settings Icon" id="settingsIcon">
+            </a>
         </div>
     </div>
+
     <!-- Content Section -->
     <div class="Content">
         <hr>
-        <h2>Welcome to your log book!</h2>
-        <p><em>Upload how your range day went!</em></p>
-        <img src="images/targetEx.png" alt="A picture of a target in a shooting range">
+        <h2>Welcome to your Log Book!</h2>
+        <p><em>Upload and document your range days here!</em></p>
+
+        <img src="images/targetEx.png" alt="A picture of a target in a shooting range" class="bannerImg">
+
         <br>
-        <a href="index.html">Return To Homepage</a>
-        <br>
-        <br>
+        <a href="index.html" class="returnLink">← Return To Homepage</a>
+
         <hr>
-        <br>
-        <pre>   This page is used for logging and tracking your shooting range sessions, including details about the 
-firearms used, ammunition, weather conditions, and personal notes. It helps you keep a record of your progress 
-and experiences over time, making it easier to review past sessions and improve your skills.</pre>
-        <br>
-        <br>
-        <button type="button" onclick="alert('\'totally\' uploaded an image')">Upload Target Results</button>
-        <br>
-        <br>
+
+        <p class="introText">
+            This page is used for logging and tracking your shooting range sessions, including details about the
+            firearms used, ammunition, weather conditions, and personal notes. It helps you keep a record of your
+            progress and experiences over time, making it easier to review past sessions and improve your skills.
+        </p>
+
+        <button type="button" id="uploadBtn" onclick="alert('Target image uploaded!')">Upload Target Results</button>
+
         <!-- Range Log Input Section -->
-        <form>
-            <label for="date">Date of Range Day:</label><br>
-            <input type="date" id="date" name="date" required="True"><br><br>
+        <form class="logForm">
+            <label for="date">Date of Range Day:</label>
+            <input type="date" id="date" name="date" required>
 
-            <label for="location">Location:</label><br>
-            <input type="text" id="location" name="location" placeholder="Enter range location" required="True"><br><br>
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="Enter range location" required>
 
-            <label for="firearms">Firearms Used:</label><br>
-            <input type="text" id="firearms" name="firearms" placeholder="List firearms used" required="True"><br><br>
+            <label for="firearms">Firearms Used:</label>
+            <input type="text" id="firearms" name="firearms" placeholder="List firearms used" required>
 
-            <label for="ammo">Ammunition Details:</label><br>
-            <input type="text" id="ammo" name="ammo" placeholder="Type and quantity of ammo used"
-                required="True"><br><br>
+            <label for="ammo">Ammunition Details:</label>
+            <input type="text" id="ammo" name="ammo" placeholder="Type and quantity of ammo used" required>
 
-            <label for="weather">Weather Conditions:</label><br>
-            <input type="text" id="weather" name="weather" placeholder="Describe weather conditions"
-                maxlength="20"><br><br>
-            <label for="notes">Notes/Observations:</label><br>
-            <textarea id="notes" name="notes" rows="4" cols="50"
-                placeholder="Enter any additional notes or observations"></textarea><br><br>
-            <label for="rating">Overall Performance Rating (0-10):</label><br>
+            <label for="weather">Weather Conditions:</label>
+            <input type="text" id="weather" name="weather" placeholder="Describe weather conditions" maxlength="20">
+
+            <label for="notes">Notes / Observations:</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Enter additional notes or observations"></textarea>
+
+            <label for="rating">Overall Performance Rating (0–10):</label>
             <input type="range" name="rating" min="0" max="10" step="1" value="5"
                 oninput="this.nextElementSibling.value = this.value">
-            <!-- I already knew how to do this, I rlly wanted to make the scale display current value.-->
-            <output>5</output><br><br>
-            <br><br>
-            <input type="submit" value="Submit Log Entry">
+            <output>5</output>
+
+            <input type="submit" value="Submit Log Entry" id="submitBtn">
         </form>
-        <br>
-        <br>
-        <!-- Previous Logs Section-->
-        <br>
+
+        <!-- Previous Logs Section -->
         <h3>Previous Range Days</h3>
-        <!-- NOTE Used AI to help fill dummy data -->
-        <table>
+        <table class="rangeTable">
             <tr>
                 <th>Date</th>
                 <th>Location</th>
@@ -134,39 +138,22 @@ and experiences over time, making it easier to review past sessions and improve 
                 <td>Wind affected accuracy, but learned a lot.</td>
                 <td>6</td>
             </tr>
-            <tr>
-                <td>2025-04-18</td>
-                <td>Green Valley Range</td>
-                <td>Colt 1911, Henry Lever Action</td>
-                <td>.45 ACP (80 rounds), .22 LR (120 rounds)</td>
-                <td>Overcast, 65°F</td>
-                <td>Fun session, lever action was smooth.</td>
-                <td>7</td>
-            </tr>
         </table>
-        <br>
-        <br>
-        <br>
+
         <hr>
+
         <!-- Additional Links Section -->
         <h3><strong>Want to improve your aim?</strong></h3>
-        <div>
+        <div class="trainingSection">
             <img src="images/rangeTraining.jpg" alt="A picture of a target in a shooting range">
-            <p>Check out this video and see if it helps you!
-                <br>
-                <br>
-                <iframe width="500" height="320" src="https://www.youtube.com/embed/Z6NTcRsuims" frameborder="0"
-                    allowfullscreen alt="How to improve your aim video"></iframe>
-            </p>
+            <p>Check out this video and see if it helps you!</p>
+            <iframe width="500" height="320" src="https://www.youtube.com/embed/Z6NTcRsuims" frameborder="0"
+                allowfullscreen></iframe>
         </div>
     </div>
 
-
     <!-- Footer Section -->
-    <footer>
-        <br>
-        <br>
-        <hr>
+    <footer class="Footer">
         <p>&copy; 2025 Arms & Range Buddy. All rights reserved.</p>
         <a href="mailto:emmanuel.giron@uri.edu"><strong>Contact Us</strong></a>
     </footer>

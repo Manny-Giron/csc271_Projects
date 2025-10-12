@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F5F6F8;
+    color: #1C1C1C;
+}
+
+/* ===== NAVBAR ===== */
+.Navbar {
+    background-color: rgb(31, 58, 147);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px 20px;
+    border-bottom: 2px solid black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#navItems {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#arbLogo {
+    height: 70px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#arbLogo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+#settingsIcon {
+    height: 45px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#settingsIcon:hover {
+    transform: rotate(15deg);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* ===== CONTENT ===== */
+.Content {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h2 {
+    color: #1F3A93;
+    margin-bottom: 10px;
+}
+
+.bannerImg {
+    height: 250px;
+    border-radius: 15px;
+    margin: 20px 0;
+    border: 2px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.returnLink {
+    display: inline-block;
+    color: rgb(31, 58, 147);
+    font-weight: bold;
+    margin: 20px 0;
+    text-decoration: none;
+}
+
+.returnLink:hover {
+    text-decoration: underline;
+}
+
+.introText {
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+#uploadBtn {
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#uploadBtn:hover {
+    background-color: #256f46;
+}
+
+/* ===== FORM ===== */
+.logForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    max-width: 700px;
+    margin: 40px auto;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.logForm label {
+    font-weight: bold;
+    margin-top: 15px;
+    align-self: flex-start;
+}
+
+.logForm input,
+.logForm textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+#submitBtn {
+    background-color: rgb(31, 58, 147);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin-top: 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#submitBtn:hover {
+    background-color: #2E8B57;
+}
+
+/* ===== TABLE ===== */
+.rangeTable {
+    border-collapse: collapse;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1000px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.rangeTable th,
+.rangeTable td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.rangeTable th {
+    background-color: rgb(31, 58, 147);
+    color: white;
+    min-width: 90px;
+}
+
+.rangeTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* ===== TRAINING SECTION ===== */
+.trainingSection {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.trainingSection img {
+    width: 400px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* ===== FOOTER ===== */
+.Footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid black;
+    margin-top: 80px;
+}
+
+.Footer a {
+    color: rgb(31, 58, 147);
+    text-decoration: none;
+}
+
+.Footer a:hover {
+    text-decoration: underline;
+}
