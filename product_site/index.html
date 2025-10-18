@@ -10,8 +10,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Homepage for an all-in-one web app that helps firearm enthusiasts log range days, manage firearm collections, access safety and training resources, and connect with others through a secure cloud-based platform.">
     <title>Arms & Range Buddy</title>
     <link rel="stylesheet" type="text/css" href="styling/index.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9KCRVPCMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-R9KCRVPCMJ');
+    </script>
 </head>
 
 <body>
@@ -19,14 +30,14 @@
     <div class="Navbar">
         <div id="navItems">
             <div>
-                <img src="images/ARB_Logo.png" alt="Logo" id="arbLogo">
+                <a href="index.html"><img src="images/ARB_Logo.png" alt="Logo" id="arbLogo"></a>
             </div>
             <div class="header">
-                <h1>Dashboard</h1>
+                <h1>Home</h1>
             </div>
         </div>
         <div>
-            <a href="dashboard.html" class="button" id="loginButton">Login / Signup</a>
+            <a href="dashboard.html" class="button" id="loginButton">Login</a>
         </div>
     </div>
     <!-- Content Section -->
@@ -83,11 +94,12 @@
                 <a class="button" id="joinButton" href="dashboard.html">Signup</a>
             </div>
         </div>
-        <!-- Footer Section -->
-        <footer class="footerSection">
-            <p>&copy; 2025 Arms & Range Buddy. All rights reserved.</p>
-            <a href="mailto:emmanuel.giron@uri.edu"><strong>Contact Us</strong></a>
-        </footer>
+    </div>
+    <!-- Footer Section -->
+    <footer class="footerSection">
+        <p>&copy; 2025 Arms & Range Buddy. All rights reserved.</p>
+        <a href="mailto:emmanuel.giron@uri.edu"><strong>Contact Us</strong></a>
+    </footer>
 </body>
 
 </html>

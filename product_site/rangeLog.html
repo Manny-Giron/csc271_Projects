@@ -10,8 +10,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Range Log page to record and review shooting sessions: firearms used, ammo, weather, notes, and 0–10 ratings, plus upload target results to track progress over time.">
     <title>Range Log</title>
     <link rel="stylesheet" href="styling/rangeLog.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9KCRVPCMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-R9KCRVPCMJ');
+    </script>
 </head>
 
 <body>
@@ -19,7 +30,9 @@
     <div class="Navbar">
         <div id="navItems">
             <div>
-                <img src="images/ARB_Logo.png" alt="Logo" id="arbLogo">
+                <a href="index.html">
+                    <img src="images/ARB_Logo.png" alt="Logo" id="arbLogo">
+                </a>
             </div>
             <div class="header">
                 <h1>Range Log Book</h1>
@@ -29,9 +42,8 @@
             <a href="dashboard.html">
                 <div class="button" id="dashboardButton">Dashboard</div>
             </a>
-            <a href="dashboard.html">
-                <img src="images/settings.png" alt="Settings Icon" id="settingsIcon">
-            </a>
+
+            <img src="images/settings.png" alt="Settings Icon" id="settingsIcon">
         </div>
     </div>
 
@@ -40,19 +52,22 @@
         <hr>
         <h2>Welcome to your Log Book!</h2>
         <p><em>Upload and document your range days here!</em></p>
+        <div id="topContent">
+            <img src="images/targetEx.png" alt="A picture of a target in a shooting range" class="bannerImg">
 
-        <img src="images/targetEx.png" alt="A picture of a target in a shooting range" class="bannerImg">
+            <br>
 
-        <br>
+
+            <p class="introText">
+                This page is used for logging and tracking your shooting range sessions, including details about the
+                firearms used, ammunition, weather conditions, and personal notes. It helps you keep a record of your
+                progress and experiences over time, making it easier to review past sessions and improve your skills.
+            </p>
+        </div>
         <a href="index.html" class="returnLink">← Return To Homepage</a>
 
         <hr>
-
-        <p class="introText">
-            This page is used for logging and tracking your shooting range sessions, including details about the
-            firearms used, ammunition, weather conditions, and personal notes. It helps you keep a record of your
-            progress and experiences over time, making it easier to review past sessions and improve your skills.
-        </p>
+        <br>
 
         <button type="button" id="uploadBtn" onclick="alert('Target image uploaded!')">Upload Target Results</button>
 

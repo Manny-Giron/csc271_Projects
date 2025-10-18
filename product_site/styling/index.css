@@ -1,3 +1,11 @@
+head {
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+body {
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
 .Navbar {
     background-color: rgb(31, 58, 147);
     border-bottom: 1px solid black;
@@ -82,7 +90,6 @@ Referenced W3 School grids for this
 
 a:visited {
     text-decoration: underline;
-    color: purple;
 }
 
 .mainContent {
@@ -121,18 +128,30 @@ a:visited {
 
 .button {
     border: 2px solid black;
-    background-color: rgb(122, 160, 255);
+    background-color: rgb(68, 105, 172);
+    box-shadow: 6px 4px 12px rgba(0, 0, 0, 0.5);
     font-weight: 600;
     transition: 0.2s;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+    color: white;
+}
+
+.button a {
     text-decoration: none;
 }
 
 .button:hover {
-    cursor: pointer;
+    /* cursor: pointer;
     background-color: rgb(176, 198, 255);
-    border: 2px solid black;
+    border: 2px solid black; */
     transition: 0.2s;
+    background-color: rgb(46, 139, 87);
+    transform: translateY(-5px);
+    box-shadow: 6px 4px 12px rgba(0, 0, 0, 0.8);
 }
+
+/*  -------------------- */
 
 #interestedSection {
     font-size: 30px;
@@ -140,9 +159,9 @@ a:visited {
 }
 
 #loginButton {
-    border-radius: 5px;
-    padding: 5px 15px;
-    font-size: 18px;
+    border-radius: 7px;
+    padding: 10px 20px;
+    font-size: 22px;
 }
 
 #joinButton {

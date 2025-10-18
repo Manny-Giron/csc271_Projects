@@ -1,13 +1,24 @@
+header {
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #F5F6F8;
     color: #1C1C1C;
+    font-family: Tahoma, Verdana, sans-serif;
 }
 
 .rightNav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+#topContent {
+    display: flex;
+    justify-self: center;
     align-items: center;
 }
 
@@ -31,7 +42,7 @@ body {
 .button:hover {
     background-color: rgb(46, 139, 87);
     transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 6px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 /* ===== NAVBAR ===== */
@@ -67,7 +78,7 @@ body {
 }
 
 #settingsIcon {
-    height: 45px;
+    height: 35px;
     background-color: white;
     border-radius: 50%;
     padding: 6px;
@@ -112,9 +123,24 @@ h2 {
 
 .introText {
     text-align: left;
-    max-width: 700px;
-    margin: 0 auto 30px auto;
+    max-width: 350px;
+    margin: 0 auto 30px 40px;
     line-height: 1.6;
+}
+
+@media (max-width: 500px) {
+    #topContent {
+        flex-direction: column;
+    }
+
+    #arbLogo {
+        display: none;
+    }
+
+    .header {
+        display: none;
+    }
+
 }
 
 #uploadBtn {

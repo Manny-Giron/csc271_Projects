@@ -10,8 +10,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content=" Dashboard page for managing shooting activities. View your latest range day, access the range log, firearm collection, safety resources, and social features all in one place.">
+
     <title>Range Log</title>
     <link rel="stylesheet" type="text/css" href="styling/dashboard.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9KCRVPCMJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-R9KCRVPCMJ');
+    </script>
 </head>
 
 <body>
@@ -20,7 +32,7 @@
     <div class="Navbar">
         <div id="navItems">
             <div>
-                <img src="images/ARB_Logo.png" alt="Logo" id="arbLogo" href="index.html">
+                <a href="index.html"><img src="images/ARB_Logo.png" alt="Logo" id="arbLogo"></a>
             </div>
             <div class="header">
                 <h1>Dashboard</h1>
@@ -49,7 +61,7 @@
             </a>
 
             <a class="linkSquare" href="rangeLog.html">
-                <img src="images/logbook.png" alt="range log" style="height:100px;">
+                <img src="images/logbook.png" alt="range logbook" style="height:100px;">
                 Go to Range Log
             </a>
 
@@ -64,7 +76,7 @@
             </a>
 
             <a class="linkSquare" href="index">
-                <img src="images/social.png" alt="cloud storage" style="height:100px;">
+                <img src="images/social.png" alt="social media feature" style="height:100px;">
                 Go to Social Feature
             </a>
 

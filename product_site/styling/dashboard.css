@@ -1,9 +1,18 @@
+header {
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+body {
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
 /* ===== NAVBAR ===== */
 .Navbar {
     background-color: rgb(31, 58, 147);
     border-bottom: 1px solid black;
     display: flex;
     justify-content: space-between;
+
     align-items: center;
     color: white;
     padding: 10px 20px;
@@ -100,13 +109,14 @@ h1 {
     align-items: center;
     padding: 20px;
     transition: all 0.25s ease-in-out;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 6px 12px 4px rgba(0, 0, 0, 0.2);
 }
 
 .linkSquare:hover {
     background-color: rgb(46, 139, 87);
     transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 6px 15px 4px rgba(0, 0, 0, 0.4);
+
 }
 
 .linkSquare img {
@@ -117,6 +127,8 @@ h1 {
 .linkSquare a {
     color: white;
     text-decoration: none;
+    box-shadow: 4px 6px 4px 10px rgba(0, 0, 0, 0.8);
+
 }
 
 /* ===== FOOTER ===== */
