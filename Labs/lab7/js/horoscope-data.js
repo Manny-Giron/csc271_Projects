@@ -41,7 +41,7 @@ var horoscopes = [
    "Trust your emotions. They will guide you in making the right choices."
 ]
 
-document.getElementsByTagName("p")[3].innerHTML = "My zodiak sign is " + mySign + ". Marvens' zodiak sign is " + partner1Sign + ". Brandons zodiak sign is " + partner2Sign + ".";
+document.getElementsByTagName("p")[3].innerHTML = "My zodiak sign is " + mySign + ".";
 document.getElementsByTagName("p")[4].innerHTML = "Marvens' zodiak sign is " + partner1Sign + ". Brandons zodiak sign is " + partner2Sign + ".";
 document.getElementsByTagName("p")[5].innerHTML = "Brandon's zodiak sign is " + partner2Sign + ".";
 
