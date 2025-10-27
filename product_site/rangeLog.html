@@ -25,7 +25,7 @@
     </script>
 </head>
 
-<body>
+<body onload="countLogs()">
     <!-- Navbar Section -->
     <div class="Navbar">
         <div id="navItems">
@@ -72,7 +72,8 @@
         <button type="button" id="uploadBtn" onclick="alert('Target image uploaded!')">Upload Target Results</button>
 
         <!-- Range Log Input Section -->
-        <form class="logForm">
+        <form class="logForm"
+            onsubmit="createLogRecord(date, location, firearms, ammo, weather, notes, rating); return false;">
             <label for="date">Date of Range Day:</label>
             <input type="date" id="date" name="date" required>
 
@@ -101,8 +102,9 @@
 
         <!-- Previous Logs Section -->
         <h3>Previous Range Days</h3>
+        <h5>Total Logs Recorded: <em><span id="logCount"></span></em></h5>
         <table class="rangeTable">
-            <tr>
+            <tr class="logRow">
                 <th>Date</th>
                 <th>Location</th>
                 <th>Firearms Used</th>
@@ -111,6 +113,7 @@
                 <th>Notes</th>
                 <th>Rating</th>
             </tr>
+            <tr></tr>
             <tr>
                 <td>2025-09-15</td>
                 <td>Sunnyvale Range</td>
@@ -175,6 +178,7 @@
         <p>&copy; 2025 Arms & Range Buddy. All rights reserved.</p>
         <a href="mailto:emmanuel.giron@uri.edu"><strong>Contact Us</strong></a>
     </footer>
+    <script src="scripts/rangeLog.js"></script>
 </body>
 
 </html>
