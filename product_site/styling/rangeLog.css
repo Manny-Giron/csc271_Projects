@@ -257,3 +257,7 @@ h2 {
 .Footer a:hover {
     text-decoration: underline;
 }
+
+#imageHide {
+    display: none;
+}
