@@ -161,3 +161,56 @@ function viewLogDetails(date, location, firearms, ammo, weather, notes, rating, 
       if (e.target === overlay) overlay.remove();
    });
 }
+// ---------------------------------------
+//   Assignment 9 Hover Preview Feature  _+_+_ >:)
+
+let previewTimeout = null;
+
+// Creating a reusable preview container
+const previewBox = document.createElement('div');
+previewBox.style.position = 'absolute';
+previewBox.style.padding = '6px';
+previewBox.style.background = 'white';
+previewBox.style.border = '1px solid #ccc';
+previewBox.style.borderRadius = '6px';
+previewBox.style.boxShadow = '0 2px 8px rgba(0,0,0,0.2)';
+previewBox.style.display = 'none';
+previewBox.style.zIndex = '999';
+document.body.appendChild(previewBox);
+
+const previewImg = document.createElement('img');
+previewImg.style.maxWidth = '200px';
+previewImg.style.maxHeight = '200px';
+previewImg.style.objectFit = 'cover';
+previewBox.appendChild(previewImg);
+
+table.addEventListener('mouseover', function (event) {
+   const row = event.target.closest('tr');
+
+   if (!row || row.classList.contains('logRow')) return;
+
+   const imgEl = row.querySelector('img');
+   if (!imgEl) return;
+
+   previewTimeout = setTimeout(() => {
+      previewImg.src = imgEl.src;
+      previewBox.style.display = 'block';
+      document.onmousemove = function (e) {
+         previewBox.style.left = (e.pageX + 15) + "px";
+         previewBox.style.top = (e.pageY + 15) + "px";
+      };
+   }, 500);
+});
+
+// for when mouse moves away, hide image
+table.addEventListener('mouseout', function (event) {
+   const row = event.target.closest('tr');
+
+   if (!row || row.classList.contains('logRow')) return;
+
+   clearTimeout(previewTimeout);
+   previewTimeout = null;
+
+   previewBox.style.display = 'none';
+   document.onmousemove = null;
+});
