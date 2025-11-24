@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Firearm Collection</title>
+   <link rel="stylesheet" href="styling/collection.css">
+</head>
+
+<body onload="displayFirearms()">
+
+   <!-- Navbar -->
+   <div class="Navbar">
+      <div id="navItems">
+         <a href="index.html">
+            <img src="images/ARB_Logo.png" id="arbLogo">
+         </a>
+         <div class="header">
+            <h1>Firearm Collection</h1>
+         </div>
+      </div>
+      <div class="rightNav">
+         <a href="dashboard.html">
+            <div class="button" id="dashboardBtn">Dashboard</div>
+         </a>
+         <img src="images/settings.png" id="settingsIcon">
+      </div>
+   </div>
+
+   <div class="Content">
+      <hr>
+      <h2>Your Collection</h2>
+      <p><em>Add firearms you own and track your inventory.</em></p>
+
+      <!-- Add Firearm Form -->
+      <form id="firearmForm">
+         <label>Name:</label>
+         <input type="text" id="name" required>
+
+         <label>Manufacturer:</label>
+         <input type="text" id="manufacturer" required>
+
+         <label>Caliber:</label>
+         <input type="text" id="caliber" required>
+
+         <label>Magazine Capacity:</label>
+         <input type="number" id="capacity" required>
+
+         <label>Type:</label>
+         <input type="text" id="type" placeholder="Handgun, Rifle, Shotgun..." required>
+
+         <input type="submit" value="Add Firearm" id="submitBtn">
+      </form>
+
+      <h3>Stored Firearms</h3>
+
+      <table class="collectionTable">
+         <thead>
+            <tr>
+               <th>Name</th>
+               <th>Manufacturer</th>
+               <th>Caliber</th>
+               <th>Capacity</th>
+               <th>Type</th>
+            </tr>
+         </thead>
+         <tbody id="firearmTableBody"></tbody>
+      </table>
+
+   </div>
+
+   <footer class="Footer">
+      <p>&copy; 2025 Arms & Range Buddy. All rights reserved.</p>
+      <a href="mailto:emmanuel.giron@uri.edu"><strong>Contact Us</strong></a>
+   </footer>
+
+   <script src="scripts/collection.js"></script>
+</body>
+
+</html>
